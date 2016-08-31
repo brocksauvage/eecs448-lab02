@@ -11,8 +11,10 @@
 #include <vector>
 #include <string>
 #include <climits>
-#include <algorithm> 
+#include <algorithm>
 #include <math.h>
+#include <functional>
+#include <random>
 
 class Test
 {
@@ -46,14 +48,14 @@ protected:
         *  @post The vector is printed.
         *
         */
-	void printVector(const std::vector<int>& vec) const;	
+	void printVector(const std::vector<int>& vec) const;
 
 	/**
 	*  @pre none
 	*  @post prints error message with contents of expected vector and given vector
 	*/
 	void printExpectedError(const std::vector<int>& expected, const std::vector<int>& given) const;
-	
+
         /**
         *  @pre None.
         *  @post None.
@@ -80,8 +82,8 @@ protected:
 
         /**
         *  @pre The vector is empty.
-        *  @post The vector is filled with the amount of unique random ints, 
-	*	range: 0 to min(TEST_SIZE^2, MAX_INT) inclusive 
+        *  @post The vector is filled with the amount of unique random ints,
+	*	range: 0 to min(TEST_SIZE^2, MAX_INT) inclusive
         *
         */
 	void uniqueRandomFill(std::vector<int>& vec, std::size_t amount);

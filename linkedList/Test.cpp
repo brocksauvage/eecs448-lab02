@@ -21,7 +21,7 @@ void Test::printPassFail(bool isPassed) const
 }
 
 void Test::printTestMessage(std::string testDescription)
-{	
+{
 	m_testNum++;
         std::cerr << "Test " << m_testNum << ": " << testDescription << ": ";
 }
@@ -37,7 +37,7 @@ void Test::printVector(const std::vector<int>& vec) const
 			std::cerr << ",";
 		}
 	}
-	std::cerr << "}";	
+	std::cerr << "}";
 }
 
 void Test::printExpectedError(const std::vector<int>& expected, const std::vector<int>& given) const
@@ -46,7 +46,7 @@ void Test::printExpectedError(const std::vector<int>& expected, const std::vecto
 	printVector(expected);
 	std::cerr << std::endl << "given:" << std::endl;
 	printVector(given);
-	std::cerr << std::endl;	
+	std::cerr << std::endl;
 }
 
 
@@ -83,7 +83,7 @@ bool Test::isSortedDescending(const std::vector<int>& vec) const
 void Test::uniqueRandomFill(std::vector<int>& vec, std::size_t amount)
 {
 	const int LIMIT = sqrt(INT_MAX) < TEST_SIZE ? INT_MAX : TEST_SIZE*TEST_SIZE;
-	std::random_device randomDevice;	
+	std::random_device randomDevice;
 	std::default_random_engine generator(randomDevice());
 	std::uniform_int_distribution<int> distribution(0,LIMIT);
 	int rand = 0;
